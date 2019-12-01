@@ -1,33 +1,23 @@
 <template>
   <div class="body">
-    <aside class="stable">
-      <!-- {{msg}} -->
-      <div class="nav-logo">
-        <img src='/static/img/logo.png' class="logo"/>
-      </div>
-      <div class="nav-sidebar">
-        <div style="height:200px;width: 100px;">4444</div>
-        <div style="height:200px;width: 100px;">4444</div>
-        <div style="height:200px;width: 100px;">4444</div>
-        <div style="height:200px;width: 100px;">4444</div>
-        <div style="height:200px;width: 100px;">4444</div>
-      </div>
-    </aside>
-    <main class="change">
-      <header class="main-header">1</header>
-      <!-- <main class="main-body">2</main>
-      <footer class="main-footer">3</footer> -->
-    </main>
+    <nav-aside></nav-aside>
+    <main-body></main-body>
   </div>
 </template>
 
 <script>
+import navAside from '../Sidebar/Aside'
+import mainBody from '../Main/Main'
 export default {
   name: 'mainlayout',
   data () {
     return {
       msg: 'My name is mainlayout'
     }
+  },
+  components:{
+    navAside,
+    mainBody
   }
 }
 </script>
