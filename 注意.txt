@@ -1,0 +1,12 @@
+使用flex布局兼容问题
+Android 
+2.3 开始就支持旧版本 display:-webkit-box;
+4.4 开始支持标准版本 display: flex;
+IOS 
+6.1 开始支持旧版本 display:-webkit-box;
+7.1 开始支持标准版本display: flex;
+PC 
+ie10开始支持，但是IE10的是-ms形式的。
+
+更新IE下載鏈接  https://support.microsoft.com/zh-cn/help/17621/internet-explorer-downloads
+谷歌瀏覽器下載鏈接  https://www.google.cn/intl/zh-CN/chrome/

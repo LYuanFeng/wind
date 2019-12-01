@@ -1,0 +1,60 @@
+
+$primary-color: rgb(194, 68, 68) !default;//!default 代表默认变量
+$primary-color: #888;//$声明全局变量 如果沒有從新設置 將會使用上面的默認變量
+@mixin border-radius{//声明一个混合宏 关键字@mixin
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+@mixin border-radius2($radius){//声明一个混合宏 不带值的参数
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+}
+@mixin border-radius3($radius:3px){//混合宏的参数--传一个带值的参数----默认值“3px”
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+}
+@mixin center($width,$height){//声明一个传多个参数的混合宏
+    width: $width;
+    height: $height;
+    margin-top: -($height) / 2;
+    margin-left: -($width) / 2;
+}
+%mt5 {//声明一个占位符 %开头 ，偌不被 @extend 调用的话，不会产生任何代码
+    margin-top: 5px;
+}
+.inherit {//设置一个集成 类class
+    font-size: 14px;
+}
+.button {
+    @include border-radius;//调用一个混合宏 关键字@include
+    @include border-radius2(3px);//调用一个混合宏 不带值的参数用法
+    @include border-radius3;//调用 一个带值的参数用法---获得是默认值
+    @include border-radius3(50%);//调用 一个带值的参数用法---获得是传过去的值 50%
+    @include center(500px,300px);//调用 一个带值多个参数混合宏用法-
+    @extend .inherit;//调用继承的类  @extend 表示调用
+    @extend %mt5;//调用一个占位符， @extend 表示调用
+}
+div{
+    $primary-color: #453698;//定義局部變量
+    border: {//属性嵌套
+        top: 1px solid red;
+        bottom: 1px solid green;
+    }
+    .clearfix{ //偽類嵌套
+        &:before,
+        &:after {
+            content:"";
+            display: table;
+          }
+        &:after {
+            clear:both;
+            overflow: hidden;
+          }
+        }
+    a{
+        color: $primary-color;//这里用是的局部变量
+    }
+    p{
+        color: aquamarine;
+    }
+}
