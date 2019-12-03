@@ -1,0 +1,32 @@
+.body .stable{  
+    display: flex;
+    flex-flow:column;
+    width:250px;/*固定宽度*/  
+    background-color: $aside-background-color;
+    .nav-logo{
+        padding-bottom: 10px;
+        border-bottom:1px solid hsla(0,0%,100%,.06)!important;
+        // border-bottom-color: hsla(0,0%,100%,.06)!important;
+    }
+    .logo {
+        width: 200px;
+    }
+    .nav-sidebar{
+        flex:1;
+        overflow:auto;
+    }
+    .nav-sidebar::-webkit-scrollbar {/*滚动条整体样式*/
+        width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+        height: 0px;
+    }
+    .nav-sidebar::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+        border-radius: 0px;
+        -webkit-box-shadow: inset 0 0 5px rgba(219, 237, 255, 0.2);
+        background: rgba(0,0,0,0.2);
+    }
+    .nav-sidebar::-webkit-scrollbar-track {/*滚动条里面轨道*/
+        -webkit-box-shadow: inset 0 0 0px  rgba(204, 193, 193, 0.2);
+        border-radius: 0;
+        background:  rgba(204, 193, 193, 0.2);
+     }
+}

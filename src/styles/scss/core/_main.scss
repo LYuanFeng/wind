@@ -1,0 +1,38 @@
+.body .main{  
+    flex:1;/*这里设置为占比1，填充满剩余空间*/  
+    background-color: $main-background-color;
+    display: flex;
+    flex-flow:column;
+    position: relative;
+    width: 100%;
+    .main-header{
+        position: absolute;
+        top:0;
+        right: 0;
+        height: $main-header-height;
+        width: 100%;
+        background: $main-header-background-color;
+        box-shadow: 0 0 2px #c9cbd1;
+        .toux{
+            position: absolute;
+            top:0;
+            left: 0;
+            height: 35px;
+            width: 50px;
+            background: #4de680;
+        }
+    }
+    .main-body{
+        margin-top: $main-header-height;
+        flex:1;
+        overflow:auto;
+    }
+    .main-footer{
+        position: absolute;
+        bottom:0;
+        right: 0;
+        height: $main-header-height;
+        width: 100%;
+        background: $main-footer-background-color;
+    }
+}
