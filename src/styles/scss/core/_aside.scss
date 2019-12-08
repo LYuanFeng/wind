@@ -2,6 +2,7 @@
     display: flex;
     flex-flow:column;
     width:250px;/*固定宽度*/  
+    color: $aside-color;
     background-color: $aside-background-color;
     .nav-logo{
         padding-bottom: 10px;
@@ -29,4 +30,7 @@
         border-radius: 0;
         background:  rgba(204, 193, 193, 0.2);
      }
+}
+.nav-sidebar .navRegion{
+    
 }

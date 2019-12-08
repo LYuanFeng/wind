@@ -5,21 +5,23 @@
     </div>
     <div class="nav-sidebar">
       <el-collapse accordion>
-        <div>站点维护</div>
-        <el-collapse-item>
-          <template slot="title">
-            一致性 Consistency<i class="header-icon el-icon-info"></i>
-          </template>
-          <div>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</div>
-          <div>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</div>
-        </el-collapse-item>
-        <el-collapse-item>
-          <template slot="title">
-            一致性 Consistency<i class="header-icon el-icon-info"></i>
-          </template>
-          <div>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</div>
-          <div>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</div>
-        </el-collapse-item>
+        <template v-for="(navRegion, iR) in data.navRegion">
+          <div class="navRegion">{{navRegion.navRegionName}}</div>
+          <div  v-for="(navClass, iC) in navRegion.child">
+            <el-collapse-item>
+              <template slot="title">
+                {{navClass.navClassName}}<i class="header-icon el-icon-info"></i>
+              </template>
+              <ul>
+                <li v-for="(navName, i) in navClass.child">
+                  {{navName}}
+                </li>
+              </ul>
+            </el-collapse-item>
+          </div>
+            
+          
+        </template>
       </el-collapse>
       
     </div>
@@ -31,9 +33,32 @@ export default {
   name: 'Aside',
   data () {
     return {
-      msg: 'My name is mainlayout'
+      msg: 'My name is mainlayout',
+      data: {
+        navRegion: [{navRegionName: '站点维护',child: [{navClassName: '首页维护', child:['Logo维护', '导航维护', '轮播图']},{navClassName: '产品维护', child:['产品维护']}]},{navRegionName: '用户维护',child: [{navClassName: '用户列表', child:['Logo维护', '导航维护', '轮播图']}]}]
+      }
     }
   }
 }
 </script>
+
+<style>
+/* 重置 ElementUI 样式*/
+  .el-collapse{
+    border: 0;
+  }
+  .el-collapse-item__header{
+    color: #838790; 
+    background-color: #333844;
+    border: 0;
+  }
+  .el-collapse-item__wrap{
+    border:0;
+    color: #838790; 
+    background-color: #333844;
+  }
+  .el-collapse-item__content{
+    color: #838790;
+  }
+</style>
 
