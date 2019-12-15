@@ -3,8 +3,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+li{
+    list-style-type:none;//清除左边的点
+}
+a{
+    text-decoration:none;
+}
 .body {
     display: flex;
+    font-size: 14px;
     position: fixed;
     flex-flow:row;
     width: 100%;

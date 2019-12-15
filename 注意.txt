@@ -10,3 +10,7 @@ ie10开始支持，但是IE10的是-ms形式的。
 
 更新IE下載鏈接  https://support.microsoft.com/zh-cn/help/17621/internet-explorer-downloads
 谷歌瀏覽器下載鏈接  https://www.google.cn/intl/zh-CN/chrome/
+
+git add . 
+git commit -m "添加你的注释,"
+git push -u origin master

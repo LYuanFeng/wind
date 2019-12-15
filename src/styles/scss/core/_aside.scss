@@ -6,8 +6,7 @@
     background-color: $aside-background-color;
     .nav-logo{
         padding-bottom: 10px;
-        border-bottom:1px solid hsla(0,0%,100%,.06)!important;
-        // border-bottom-color: hsla(0,0%,100%,.06)!important;
+        // border-bottom:1px solid hsla(0,0%,100%,.06)!important;
     }
     .logo {
         width: 200px;
@@ -32,5 +31,21 @@
      }
 }
 .nav-sidebar .navRegion{
-    
+    padding: 14px 20px;
+    border-top:1px solid hsla(0,0%,100%,.06)!important;
+}
+.nav-sidebar ul {
+    padding: 2px 0px;
+}
+.nav-sidebar ul li{
+    color: $aside-color;
+    padding: 8px 20px;
+    cursor: pointer;//鼠标移上加小手
+}
+.nav-sidebar ul li:hover{
+    color: $aside-color-hover;
+}
+.nav-sidebar .current{
+    color: $aside-li-color-current;
+    background:  $aside-li-bg-current;
 }
