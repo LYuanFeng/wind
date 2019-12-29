@@ -35,7 +35,7 @@ export default {
     return {
       msg: 'My name is mainlayout',
       data: {
-        navRegion: [{navRegionName: '站点维护',child: [{navClassName: '首页维护', child:[{navUrl: '/wind/mainLayout/p01', navName: 'Logo维护'},{navUrl: '/wind/mainLayout/p02', navName: '导航维护'},{navUrl: '/p01', navName: '轮播图'}]},{navClassName: '产品维护', child:[{navUrl: '/p01', navName: '轮播图'}]}]},{navRegionName: '用户维护',child: [{navClassName: '客户维护', child:[{navUrl: '/p01', navName: '客户列表'},{navUrl: '/p01', navName: '导航维护'},{navUrl: '/p01', navName: '轮播图'}]}]}]
+        navRegion: [{navRegionName: '站点维护',child: [{navClassName: '首页维护', child:[{navUrl: '/wind/management/p01', navName: 'Logo维护'},{navUrl: '/wind/management/p02', navName: '导航维护'},{navUrl: '/p01', navName: '轮播图'}]},{navClassName: '产品维护', child:[{navUrl: '/p01', navName: '轮播图'}]}]},{navRegionName: '用户维护',child: [{navClassName: '客户维护', child:[{navUrl: '/p01', navName: '客户列表'},{navUrl: '/p01', navName: '导航维护'},{navUrl: '/p01', navName: '轮播图'}]}]}]
       }
     }
   },

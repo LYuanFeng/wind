@@ -4,6 +4,11 @@
     width:250px;/*固定宽度*/  
     color: $aside-color;
     background-color: $aside-background-color;
+    // user-select控制不能选中
+    -moz-user-select:none;		/* 火狐 */
+	-webkit-user-select:none;	/* 谷歌 */
+	-ms-user-select:none;		/* IE */
+	user-select:none;
     .nav-logo{
         padding-bottom: 10px;
         // border-bottom:1px solid hsla(0,0%,100%,.06)!important;
